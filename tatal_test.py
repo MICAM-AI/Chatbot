@@ -1,3 +1,4 @@
 import chat
 
-chat.chat_ai('너무 싫다')
+chat.chat_ai('이만가볼께요')
+

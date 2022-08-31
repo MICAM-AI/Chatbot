@@ -6,8 +6,8 @@ import pandas as pd
 
 def chat_ai(text):
     model = SentenceTransformer('jhgan/ko-sroberta-multitask')
-    df = pd.read_csv('ChatbotData.csv')
-    df_embeding = pd.read_csv('embeding.csv', header=None)
+    df = pd.read_csv('text_data/ChatbotData.csv')
+    df_embeding = pd.read_csv('text_data/embeding.csv', header=None)
 
     em_result = model.encode(text)
     co_result = []
