@@ -3,7 +3,6 @@ from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
 
-
 def chat_ai(text):
     model = SentenceTransformer('jhgan/ko-sroberta-multitask')
     df = pd.read_csv('text_data/ChatbotData.csv')
@@ -19,5 +18,5 @@ def chat_ai(text):
     r = random.randint(0, 5)
     df['cos'] = co_result
     df_result = df.sort_values('cos', ascending=False)
-    result = print(df_result.iloc[r]['A'])
+    result = df_result.iloc[r]['A']
     return result
