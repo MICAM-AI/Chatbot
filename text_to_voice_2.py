@@ -9,7 +9,7 @@ import playsound
 ##TTS code##
 def speak(text):
 
-     tts = gTTS(text=text, lang='ko',slow=False)
+     tts = gTTS(text=text, lang='ko', slow=False)
      filename='answer.mp3'
      tts.save(filename)
      playsound.playsound(filename)
